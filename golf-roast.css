@@ -1,0 +1,135 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #F2F2F2;
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif; 
+    font-weight: 700; 
+}
+
+p {
+    line-height: 1.5em;
+}
+
+header {
+    background-color: #082B59;
+    padding: 20px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 4px solid #59331D;
+}
+
+.logo-container img {
+    width: 150px; /* Adjusted for mobile */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column; /* Stack nav items for mobile */
+    align-items: center;
+    gap: 10px;
+}
+
+nav ul li a {
+    color: #F2F2F2;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.content {
+    display: flex;
+    flex-direction: column; /* Stack sections for mobile */
+    align-items: center;
+    padding: 20px;
+}
+
+.about-section, .card {
+    background-color: #F2F2F2;
+    padding: 20px; /* Added padding */
+    border-radius: 10px;
+    margin: 20px; /* Adjusted margin for mobile */
+    width: 100%; /* Full width on mobile */
+}
+
+.card {
+    background-color: #59331D;
+    color: white;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.card img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+button {
+    background-color: #59331D;
+    font-family: 'Poppins', sans-serif; 
+    letter-spacing: .15rem;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    color: white;
+    margin-top: 30px;
+}
+
+footer {
+    background-color: #082B59;
+    color: white;
+    text-align: center;
+    padding: 20px; 
+    border-top: 4px solid #59331D;
+}
+
+/* Medium Devices */
+@media (min-width: 768px) {
+    .content {
+        flex-direction: row; /* Use flex row for larger screens */
+        justify-content: space-around;
+    }
+
+    .logo-container img {
+        width: 200px; /* Larger logo for larger screens */
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    .about-section, .card {
+        width: 45%; /* Adjust width for side-by-side layout */
+    }
+}
+
+/* Large Devices */
+@media (min-width: 1024px) {
+    header, .content, footer {
+        max-width: 960px;
+        margin: 0 auto; /* Center content for large screens */
+    }
+
+    .about-section, .card {
+        margin: 40px; /* Larger margin for more space */
+    }
+}
